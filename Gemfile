@@ -31,7 +31,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'friendly_id', '~> 5.1.0'
+
 gem 'simple_form'
+
+gem 'geocoder'
+
+gem "intercom-rails"
+
+gem 'devise'
+
+gem "letter_opener", :group => :development
 
  group :production do
  	gem 'pg'
