@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :discs
+  resources :course_holes
+  resources :holes
   resources :courses
   devise_for :users
    root to: "home#index"

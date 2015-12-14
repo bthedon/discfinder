@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @disc.brand %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @disc.name %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @disc.color %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @disc.user_id %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @disc.course_id %>
+</p>
+
+<p>
+  <strong>Hole:</strong>
+  <%= @disc.hole_id %>
+</p>
+
+<p>
+  <strong>Day lost:</strong>
+  <%= @disc.day_lost %>
+</p>
+
+<%= link_to 'Edit', edit_disc_path(@disc) %> |
+<%= link_to 'Back', discs_path %>

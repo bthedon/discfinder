@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  name: MyString
+  color: MyString
+  user_id: 1
+  course_id: 1
+  hole_id: 1
+  day_lost: 2015-12-14
+
+two:
+  brand: MyString
+  name: MyString
+  color: MyString
+  user_id: 1
+  course_id: 1
+  hole_id: 1
+  day_lost: 2015-12-14

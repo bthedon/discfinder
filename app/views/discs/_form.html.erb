@@ -1,0 +1,17 @@
+<%= simple_form_for(@disc) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :brand %>
+    <%= f.input :name %>
+    <%= f.input :color %>
+    <%= f.input :user_id %>
+    <%= f.input :course_id %>
+    <%= f.input :hole_id %>
+    <%= f.input :day_lost %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

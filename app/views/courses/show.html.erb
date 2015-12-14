@@ -11,8 +11,11 @@
 </p>
 
 <p>
-  <strong>Slug:</strong>
-  <%= @course.slug %>
+  <strong>Address:</strong>
+  <%= @course.address %> 
+  <br>
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@course.latitude}%2C#{@course.longitude}" %>
+
 </p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
