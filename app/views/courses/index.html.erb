@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Address</th>
+      <th>Discs Lost</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= course.name %></td>
         <td><%= course.description %></td>
         <td><%= course.address %></td>
+        <td><%= course.discs.count %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -5,9 +5,8 @@
     <%= f.input :brand %>
     <%= f.input :name %>
     <%= f.input :color %>
-    <%= f.input :user_id %>
-    <%= f.input :course_id %>
-    <%= f.input :hole_id %>
+    <%= f.association :course %>
+    <%= f.association :hole %>
     <%= f.input :day_lost %>
   </div>
 
