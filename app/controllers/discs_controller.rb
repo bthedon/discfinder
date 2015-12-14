@@ -29,6 +29,7 @@ class DiscsController < ApplicationController
 
     respond_to do |format|
       if @disc.save
+        UserMailer.disc_lost(@disc.id).deliver_later
         format.html { redirect_to @disc, notice: 'Disc was successfully created.' }
         format.json { render :show, status: :created, location: @disc }
       else
@@ -43,6 +44,7 @@ class DiscsController < ApplicationController
   def update
     respond_to do |format|
       if @disc.update(disc_params)
+        UserMailer.disc_found(@disc.id, current_user).deliver_later
         format.html { redirect_to @disc, notice: 'Disc was successfully updated.' }
         format.json { render :show, status: :ok, location: @disc }
       else
@@ -76,6 +78,7 @@ class DiscsController < ApplicationController
                                     :user_id, 
                                     :course_id, 
                                     :hole_id, 
-                                    :day_lost)
+                                    :day_lost,
+                                    :is_found)
     end
 end

@@ -20,8 +20,7 @@
 
 <p>
   <h2>Lost Discs</h2>
-</p>
-<table class="table">
+  <table class="table">
   <thead>
     <tr>
       <th>Hole</th>
@@ -40,8 +39,12 @@
    		 <td><%= disc.brand %></td>
    		 <td><%= disc.name %></td>  
 	</tr>
- <% end %> 
+  <% end %>
+  </tbody>
+  </table> 
 </p>
+
+<br>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
