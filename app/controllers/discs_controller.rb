@@ -1,5 +1,6 @@
 class DiscsController < ApplicationController
   before_action :set_disc, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :create]
 
   # GET /discs
   # GET /discs.json
@@ -14,7 +15,7 @@ class DiscsController < ApplicationController
 
   # GET /discs/new
   def new
-    @disc = Disc.new
+    @disc = current_user.discs.new
   end
 
   # GET /discs/1/edit
@@ -24,7 +25,7 @@ class DiscsController < ApplicationController
   # POST /discs
   # POST /discs.json
   def create
-    @disc = Disc.new(disc_params)
+    @disc = current_user.discs.new(disc_params)
 
     respond_to do |format|
       if @disc.save
@@ -69,6 +70,12 @@ class DiscsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def disc_params
-      params.require(:disc).permit(:brand, :name, :color, :user_id, :course_id, :hole_id, :day_lost)
+      params.require(:disc).permit(:brand, 
+                                    :name, 
+                                    :color, 
+                                    :user_id, 
+                                    :course_id, 
+                                    :hole_id, 
+                                    :day_lost)
     end
 end
